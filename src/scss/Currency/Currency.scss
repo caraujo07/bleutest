@@ -1,0 +1,92 @@
+.intro {
+  text-align: center;
+  margin-top: 100px;
+  h1 {
+    @include title;
+    color: $bleutest-darkblue;
+    margin-bottom: 30px;
+  }
+  p {
+    @include paragraph;
+    span {
+      background: $bleutest-lightgrey;
+      border: 1px solid $bleutest-grey;
+      border-radius: 8px;
+      padding: 3px 10px;
+    }
+  }
+}
+
+.swap {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.price {
+  display: inline-block;
+  padding: 0 20px;
+  input {
+    @include inputText;
+    text-align: right;
+    color: $bleutest-darkgrey;
+    height: 66px;
+    width: 140px;
+    border-radius: 8px;
+    border: 2px solid $bleutest-grey;
+    border-right: none;
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+    padding-right: 20px;
+    &:disabled {
+      background-color: $bleutest-white;
+    }
+    &:focus {
+      outline: none;
+    }
+  }
+  select {
+    @include inputText;
+    color: $bleutest-darkblue;
+    font-weight: bold;
+    height: 70px;
+    border: 2px solid $bleutest-grey;
+    border-left: none;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    margin-left: -10px;
+    padding: 0 40px 0 10px;
+    appearance: none;
+    &:disabled {
+      background-color: $bleutest-white;
+    }
+    &:focus {
+      outline: none;
+    }
+  }
+}
+
+.price {
+  position: relative;
+}
+
+.price::after {
+  content: '|';
+  display: block;
+  position: absolute;
+  color: $bleutest-grey;
+  top: 0;
+  font-size: 3rem;
+  right: 40.5%;
+}
+
+#disabled.price {
+  select {
+    color: $bleutest-darkgrey;
+  }
+}
+
+#enabled.price  select {
+  background: url("data:image/svg+xml;utf8,<svg width='20' height='13' viewBox='0 0 20 13' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M17.18 0.179932L10 7.33993L2.82 0.179932L0 2.99993L10 12.9999L20 2.99993L17.18 0.179932Z' fill='rgb(0,51,88)'/></svg>") no-repeat;
+  background-position-x: 84%;
+  background-position-y: center;
+}

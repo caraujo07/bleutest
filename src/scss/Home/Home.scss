@@ -1,0 +1,17 @@
+.home-intro {
+  text-align: center;
+  margin-top: 8%;
+  h1 {
+    @include title;
+    margin-bottom: 30px;
+  }
+  p {
+    @include paragraph;
+    span {
+      background: $bleutest-lightgrey;
+      border: 1px solid $bleutest-grey;
+      border-radius: 8px;
+      padding: 3px 10px;
+    }
+  }
+}

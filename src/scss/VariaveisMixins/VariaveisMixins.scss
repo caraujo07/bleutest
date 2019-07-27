@@ -1,0 +1,32 @@
+// Colors
+$bleutest-blue: #0080DD;
+$bleutest-darkblue: #003358;
+$bleutest-darkgrey: #585858;
+$bleutest-grey: #BEBEBE;
+$bleutest-lightgrey: #EFEFEF;
+$bleutest-white: #FFF;
+
+// Mixins
+@mixin title {
+  font-family: 'Roboto', sans-serif;
+  color: $bleutest-darkblue;
+  font-size: 52px;
+  font-weight: 300;
+}
+
+@mixin paragraph {
+  font-family: 'Roboto', sans-serif;
+  color: $bleutest-darkgrey;
+  font-size: 18px;
+  line-height: 32px;
+}
+
+@mixin inputText {
+  font-family: 'Roboto', sans-serif;
+  font-size: 28px;
+}
+
+@mixin linkStyle {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+}

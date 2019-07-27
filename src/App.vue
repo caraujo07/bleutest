@@ -4,18 +4,25 @@
     <transition>
       <router-view />
     </transition>
+    <Footer />
   </div>
 </template>
 
 <script>
 import Header from './components/Header/Header.vue';
+import Footer from './components/Footer/Footer.vue';
 
 export default {
   name: 'app',
   components: {
-    Header
+    Header,
+    Footer
   }
 }
 </script>
 
-<style lang="scss" src="./scss/main.scss"></style>
+<style lang="scss" src="./scss/main.scss">
+  #app {
+    position: relative;
+  }
+</style>

@@ -1,6 +1,6 @@
-# helloworld
+# Bleutest
 
-## Project setup
+## To setup the project run:
 ```
 npm install
 ```

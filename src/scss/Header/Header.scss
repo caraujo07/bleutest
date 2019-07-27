@@ -55,6 +55,12 @@
 
 .nav {
   display: flex;
+  @include d(m) {
+    display: none;
+  }
+  @include d(s) {
+    display: none;
+  }
 }
 
 .btn {
@@ -106,4 +112,43 @@
 
 .router-link-exact-active::after {
   opacity: 1!important;
+}
+
+#nav-btn {
+  cursor: pointer;
+  transition: left .4s linear;
+  @include d(l) {
+    display: none;
+  }
+  &:hover {
+    opacity: .8;
+  }
+  div {
+    width: 35px;
+    height: 4px;
+    background: #FFF;
+    margin: 5px 0;
+    transition: all .4s linear;
+  }
+}
+
+#nav-slide {
+  position: fixed;
+  left: -250px;
+  width: 250px;
+  top: 100px;
+  background: $bleutest-blue;
+  transition: all .4s linear;
+  z-index: 9999;
+  li {
+    display: block;
+    text-align: center;
+    padding: 30px 0;
+  }
+}
+
+#toggle {
+  @include d(l) {
+    display: none;
+  }
 }

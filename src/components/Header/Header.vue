@@ -20,6 +20,22 @@
         </select>
       </div>
     </div>
+    <div id="toggle">
+      <div id="nav-btn" @click="slideToggle()">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <section id="nav-slide">
+        <ul>
+          <li><router-link to="/buy">Bleutest BUY</router-link></li>
+          <li><router-link to="/compare">Compare</router-link></li>
+          <li><router-link to="/remittance">Remittance</router-link></li>
+          <li><router-link to="/exchanges">Exchanges</router-link></li>
+          <li><router-link to="/exchanges-free">Exchanges' free</router-link></li>
+      </ul>
+      </section>
+    </div>
     </nav>
   </div>
 </template>
@@ -42,6 +58,16 @@ export default {
       } else if (this.flag === 'USD') {
         this.brl = false;
         this.usd = true;
+      }
+    },
+    slideToggle() {
+      let slider = document.getElementById('nav-slide');
+      slider.style.height = window.innerHeight - 60 + 'px';
+
+      if(slider.style.left == '0px') {
+        slider.style.left = '-250px';
+      }else {
+        slider.style.left = '0px';
       }
     }   
   }

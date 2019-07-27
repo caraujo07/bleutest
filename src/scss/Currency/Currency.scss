@@ -1,6 +1,14 @@
 .intro {
   text-align: center;
   margin-top: 100px;
+  @include d(s) {
+    width: 300px;
+    margin: 60px auto 0 auto;
+  }
+  @include d(m) {
+    width: 600px;
+    margin: 60px auto 0 auto;
+  }
   h1 {
     @include title;
     color: $bleutest-darkblue;
@@ -89,4 +97,7 @@
   background: url("data:image/svg+xml;utf8,<svg width='20' height='13' viewBox='0 0 20 13' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M17.18 0.179932L10 7.33993L2.82 0.179932L0 2.99993L10 12.9999L20 2.99993L17.18 0.179932Z' fill='rgb(0,51,88)'/></svg>") no-repeat;
   background-position-x: 84%;
   background-position-y: center;
+  @include d(s) {
+    margin-bottom: 20px;
+  }
 }

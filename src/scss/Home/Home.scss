@@ -1,6 +1,10 @@
 .home-intro {
   text-align: center;
   margin-top: 8%;
+  @include d(s) {
+    width: 300px;
+    margin: 60px auto 0 auto;
+  }
   h1 {
     @include title;
     margin-bottom: 30px;
